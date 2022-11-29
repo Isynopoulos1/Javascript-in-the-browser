@@ -53,3 +53,20 @@ overlay.addEventListener('click', closeModal);
 // console.log(Object.values(user));
 // console.log(Object.keys(user));
 // console.log(Object.entries(user));
+
+// ////////////// key events
+
+/* HAY 3 TIPOS DE KEY EVENTS, KEY DOWN , KEY PRESS, KEY UP*/
+/*KEY UP, CUANDO LEVANTAMOS EL DEDO DE LA TECLA*/
+/*KEY PRESS , CUANDO MIENTRAS MANTENERMOS EL DEDO EN CIERTA TECLA*/
+/*KEY DOWN SE ACTIVA EN CUANTO PRESIONAMOS LA TECLA*/
+
+document.addEventListener('keydown', function (e) {
+  console.log(e.key);
+
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    /*if (!modal.classList.contains('hidden')) {*/
+
+    closeModal();
+  }
+});
